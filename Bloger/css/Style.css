@@ -1,0 +1,137 @@
+@import url(../css/fonts.css);
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root{
+    /* theme color  */
+    --text-gray:#3f4954;
+    --text-light: #6886666da;
+    --bg-color: #0f0f0f;
+    --midnight:#104f55;
+    /* gradient color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* theme font-family:  */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin_Sans:'Josefin_Sans',cursive;
+    --Lexend_Deca:'Lexend_Deca',cursive;
+    --Livvic:'Livvic',cursive;
+}
+
+
+/* *************** Global classes *************** */
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+/* ******X********* Global classes *********X****** */
+
+/* *************** navbar *************** */
+
+.nav{
+    background: var(--sky);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 15vh;
+    transition: 0.5s ease-in-out;
+}
+.header-information{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(204, 235, 69);
+    text-align: center;
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend_Deca);
+    font-size: 3.6rem;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.nav .toogle-collpase{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+} 
+
+.nav .toogle-collpase .toogle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+} 
+
+.nav .toogle-collpase .toogle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray); 
+}
+.collapse{
+    height: 30rem;
+}
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+.nav .nav-items .nav-link{
+    padding: 1.3rem 2rem;
+    font-size: 1.6rem;
+    position: relative;
+    font-size: 2rem;
+    font-family: var(--Abel);
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+    font-size: 2.2rem;
+}
+
+.nav .social i{
+    padding: 0.2rem 0;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+/* ******X********* navbar *********X****** */
+
+/* Viewport less then or equal to 750px */
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu,.nav-items{
+        flex-direction: column;
+    }
+    .nav .toogle-collpase{
+        display: initial;
+    }
+}
+
+/* X   Viewport less then or equal to 750px     X    */
